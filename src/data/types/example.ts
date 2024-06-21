@@ -1,4 +1,4 @@
 import { z } from "zod";
-import { exampleSchema } from "../schemas/example";
+import { formSchema } from "../schemas/example";
 
-export type TExample = z.input<typeof exampleSchema>;
+export type TExample = z.input<typeof formSchema>;

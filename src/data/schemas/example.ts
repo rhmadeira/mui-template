@@ -1,18 +1,10 @@
-import dayjs from "dayjs";
 import * as z from "zod";
 
-export const exampleSchema = z.object({
+export const formSchema = z.object({
   id: z.string(),
   name: z.string(),
   idade: z.number().optional(),
   dataNascimento: z.string(),
-});
-
-export const exampleSchemaTransform = exampleSchema.transform((data) => {
-  return {
-    ...data,
-    dataNascimento: dayjs(data.dataNascimento).format("DD/MM/YYYY"),
-  };
 });
 
 // const example = exampleSchemaTransform.safeParse({
