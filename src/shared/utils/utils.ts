@@ -86,7 +86,7 @@ const onPaste = ({ text }: IOnPaste) => {
   return res;
 };
 
-export const functionUtils = {
+export const utils = {
   clearZerosLeft,
   batchArray,
   sortArray,
