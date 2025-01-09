@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Home</h1>
+      {/* <h1>Home</h1> */}
       {initialData.map((item, index) => (
         <div key={index}>{item.name}</div>
       ))}
