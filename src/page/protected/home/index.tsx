@@ -1,4 +1,5 @@
 import { IDashboardData } from "@/data/actions/dashboard-loader";
+import { Box, Typography } from "@mui/material";
 import { useLoaderData } from "react-router-dom";
 
 export default function Home() {
@@ -13,11 +14,12 @@ export default function Home() {
   // });
 
   return (
-    <div>
-      {/* <h1>Home</h1> */}
+    <>
       {initialData.map((item, index) => (
-        <div key={index}>{item.name}</div>
+        <Box width={200} height={200} bgcolor={"red"} key={index}>
+          <Typography>{item.name}</Typography>
+        </Box>
       ))}
-    </div>
+    </>
   );
 }
