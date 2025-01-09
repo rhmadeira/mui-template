@@ -1,7 +1,7 @@
 import { dashboardLoader } from "@/data/actions/dashboard-loader";
 import Login from "@/page/auth/login";
-import Home from "@/page/home";
-import ProtectedRoute from "@/shared/layouts/protected";
+import Home from "@/page/protected/home";
+import ProtectedRoute from "@/page/protected";
 import { WebLayout } from "@/shared/layouts/web";
 import { createBrowserRouter } from "react-router-dom";
 
