@@ -8,20 +8,20 @@ export const lightTheme = createTheme(
     palette: {
       mode: "light",
       primary: {
-        main: "#0590D1",
-        dark: "#03263a",
-        light: "#49769a",
-        contrastText: "#ffffff",
+        main: "#4CAF50", // Verde vibrante
+        dark: "#357A38", // Verde mais escuro
+        light: "#81C784", // Verde mais claro
+        contrastText: "#FFFFFF", // Texto branco para contraste
       },
       secondary: {
-        main: "#f7efd8",
-        dark: cyan[800],
-        light: cyan[500],
-        contrastText: "#ffffff",
+        main: "#FF9800", // Laranja vibrante
+        dark: "#F57C00", // Laranja escuro
+        light: "#FFB74D", // Laranja claro
+        contrastText: "#FFFFFF", // Texto branco
       },
       background: {
-        default: grey[300],
-        paper: grey[200],
+        default: "#FAFAFA", // Fundo cinza bem claro
+        paper: "#FFFFFF", // Fundo branco para cartões e papéis
       },
     },
     typography: {
