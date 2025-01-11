@@ -9,7 +9,7 @@ type TThemeApp = {
 export const useThemeApp = create(
   persist<TThemeApp>(
     (set) => ({
-      isDark: false,
+      isDark: true,
       toggleTheme: () => set((state) => ({ isDark: !state.isDark })),
     }),
     {

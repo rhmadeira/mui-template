@@ -7,3 +7,8 @@ export type TApiResponseModel<T> = {
   httpStatusCode: string;
   dataRequisicao: Date;
 };
+
+export type ISvg = {
+  width: number;
+  height: number;
+};

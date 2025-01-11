@@ -15,7 +15,7 @@ export function WebLayout() {
         background: theme.palette.primary.main,
       }}
     >
-      <CssBaseline />
+      <CssBaseline enableColorScheme />
       <Navbar />
       <Sidebar />
       <Main open={drawerOpened}>
