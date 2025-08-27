@@ -3,7 +3,7 @@ import Sidebar from "@/shared/components/menu/sidebar";
 import { Box, CssBaseline, useTheme } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { Main } from "./styles";
-import { useDrawerStore } from "@/data/store/drawer-store";
+import { useDrawerStore } from "@/data/store/drawer";
 
 export function WebLayout() {
   const theme = useTheme();

@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material";
-import { cyan, grey } from "@mui/material/colors";
 import { ptBR } from "@mui/material/locale";
 import { ptBR as pickerBR } from "@mui/x-data-grid/locales";
 

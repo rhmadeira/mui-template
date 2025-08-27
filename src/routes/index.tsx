@@ -1,9 +1,9 @@
 import { dashboardLoader } from "@/data/actions/dashboard-loader";
-import Login from "@/page/auth/login";
 import Home from "@/page/authenticated/home";
 import { WebLayout } from "@/shared/layouts/web";
 import { createBrowserRouter } from "react-router-dom";
 import Authenticated from "@/page/authenticated";
+import { Login } from "@mui/icons-material";
 
 export const router = createBrowserRouter([
   {

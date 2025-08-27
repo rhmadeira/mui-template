@@ -1,4 +1,4 @@
-import { useDrawerStore } from "@/data/store/drawer-store";
+import { useDrawerStore } from "@/data/store/drawer";
 import { AppBar, Toolbar, useTheme } from "@mui/material";
 
 export default function Navbar() {

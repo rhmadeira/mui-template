@@ -3,47 +3,31 @@ import CssBaseline from "@mui/material/CssBaseline";
 import FormLabel from "@mui/material/FormLabel";
 import FormControl from "@mui/material/FormControl";
 import { LogoLight } from "@/shared/icons/logo-ligth";
-import useMediaQuery from "@/data/hooks/use-media-query";
-import { useThemeApp } from "@/data/store/theme-store";
 import { LogoDark } from "@/shared/icons/logo-dark";
 import InputCustom from "../form/input-custom";
 import ButtonCustom from "../form/button-custom";
 import CheckBoxCustom from "../form/checkbox-custom";
-import { Controller, UseFormReturn } from "react-hook-form";
-import { z } from "zod";
 import { CardStyled, SignInContainer } from "./styles";
+import { useThemeStore } from "@/data/store/theme";
+import { Controller, useFormContext } from "react-hook-form";
+import { TLoginFormSchema } from "@/data/schemas/auth";
 
-export const loginSchema = z.object({
-  email: z.string().email(),
-  password: z.string().min(1, { message: "Senha Obrigatória" }),
-});
-
-export type TLoginSchema = Zod.input<typeof loginSchema>;
-
-interface ISignInProps {
-  form: UseFormReturn<TLoginSchema>;
-  login: (payload: TLoginSchema) => void;
-}
-
-export default function SignIn({ login, form }: ISignInProps) {
-  const isDak = useThemeApp((x) => x.isDark);
-  const { smUp } = useMediaQuery();
+export default function SignIn() {
+  const form = useFormContext<TLoginFormSchema>();
+  const isDark = useThemeStore((x) => x.isDark);
 
   return (
     <SignInContainer direction="column" justifyContent="space-between">
       <CssBaseline />
       <CardStyled variant="outlined">
         <Box margin={"0 auto"}>
-          {isDak ? (
+          {isDark ? (
             <LogoDark width={64} height={34} />
           ) : (
             <LogoLight width={64} height={34} />
           )}
         </Box>
         <Box
-          component="form"
-          onSubmit={form.handleSubmit(login)}
-          noValidate
           sx={{
             display: "flex",
             flexDirection: "column",

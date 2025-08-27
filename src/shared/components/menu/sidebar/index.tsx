@@ -2,7 +2,7 @@ import { drawerWidth } from "@/shared/constants/default";
 import { CSSObject, styled, Theme, useTheme } from "@mui/material/styles";
 import MuiDrawer from "@mui/material/Drawer";
 import { Box, List, useMediaQuery } from "@mui/material";
-import { useDrawerStore } from "@/data/store/drawer-store";
+import { useDrawerStore } from "@/data/store/drawer";
 import { useNavigate } from "react-router-dom";
 import Item from "./item";
 import { SIDEBAR_MENU } from "@/shared/constants/sidebar-menu";

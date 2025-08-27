@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { SvgIconComponent } from "@mui/icons-material";
-import { useDrawerStore } from "@/data/store/drawer-store";
+import { useDrawerStore } from "@/data/store/drawer";
 
 interface IItemProps {
   name: string;
