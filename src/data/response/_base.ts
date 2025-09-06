@@ -5,7 +5,7 @@ export type TApiResponseModel<T> = {
   hasError: boolean;
   errors: unknown[];
   httpStatusCode: string;
-  dataRequisicao: Date;
+  dataRequisicao: string;
 };
 
 export type ISvg = {
