@@ -1,4 +1,4 @@
-import { usePermissionStore } from "@/data/store/permissions";
+import { usePermissionStore } from "@/data/store/permission";
 import { Navigate } from "react-router-dom";
 
 export default function CheckPermissionComponent({

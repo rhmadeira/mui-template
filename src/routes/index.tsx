@@ -4,6 +4,7 @@ import { WebLayout } from "@/shared/layouts/web";
 import { createBrowserRouter } from "react-router-dom";
 import Authenticated from "@/page/authenticated";
 import { Login } from "@mui/icons-material";
+import NoAuthenticated from "@/page/no-authenticated";
 
 export const router = createBrowserRouter([
   {
@@ -15,7 +16,7 @@ export const router = createBrowserRouter([
         element: <WebLayout />,
         children: [
           {
-            path: "/",
+            path: "/inicio",
             element: <Home />,
             loader: dashboardLoader,
           },
@@ -25,6 +26,12 @@ export const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />,
+    element: <NoAuthenticated />,
+    children: [
+      {
+        path: "/",
+        element: <Login />,
+      },
+    ],
   },
 ]);
